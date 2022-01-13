@@ -1,6 +1,8 @@
 " Vim with all enhancements
 source $VIMRUNTIME/vimrc_example.vim
 
+set runtimepath=$HOME/dotfiles/.vim/
+
 " Use the internal diff if available.
 " Otherwise use the special 'diffexpr' for Windows.
 if &diffopt !~# 'internal'
