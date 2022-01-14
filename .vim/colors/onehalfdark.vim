@@ -49,7 +49,7 @@ function! s:h(group, fg, bg, attr)
     exec "hi " . a:group . " guifg=NONE cterm=NONE"
   endif
   if type(a:bg) == type({})
-    exec "hi " . a:group .  " guibg=NONE ctermbg=NONE"
+    exec "hi " . a:group . " guibg=" . a:bg.gui . " ctermbg=" . a:bg.cterm
   else
     exec "hi " . a:group . " guibg=NONE ctermbg=NONE"
   endif
@@ -62,7 +62,7 @@ endfun
 
 
 " User interface colors {
-call s:h("Normal", s:fg, s:fg, "")
+call s:h("Normal", s:fg, "", "")
 
 call s:h("Cursor", s:bg, s:blue, "")
 call s:h("CursorColumn", "", s:cursor_line, "")
