@@ -26,6 +26,7 @@ let s:purple      = { "gui": "#c678dd", "cterm": "176" }
 let s:cyan        = { "gui": "#56b6c2", "cterm": "73"  }
 let s:white       = { "gui": "#dcdfe4", "cterm": "188" }
 
+
 let s:fg          = s:white
 let s:bg          = s:black
 
@@ -123,7 +124,7 @@ call s:h("WildMenu", s:fg, "", "")
 " See :help hl-Whitespace and :help hl-SpecialKey
 call s:h("Whitespace", s:non_text, "", "")
 call s:h("NonText", s:non_text, "", "")
-call s:h("Comment", s:comment_fg, "", "italic")
+call s:h("Comment", s:comment_fg, "", "")
 call s:h("Constant", s:cyan, "", "")
 call s:h("String", s:green, "", "")
 call s:h("Character", s:green, "", "")
