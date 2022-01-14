@@ -26,11 +26,10 @@ let s:purple      = { "gui": "#c678dd", "cterm": "176" }
 let s:cyan        = { "gui": "#56b6c2", "cterm": "73"  }
 let s:white       = { "gui": "#dcdfe4", "cterm": "188" }
 
-
 let s:fg          = s:white
 let s:bg          = s:black
 
-let s:comment_fg  = { "gui": "#5c6370", "cterm": "241" }
+let s:comment_fg  = { "gui": "#005f00", "cterm": "28" }
 let s:gutter_bg   = { "gui": "#282c34", "cterm": "236" }
 let s:gutter_fg   = { "gui": "#919baa", "cterm": "247" }
 let s:non_text    = { "gui": "#373C45", "cterm": "239" }
@@ -159,3 +158,45 @@ call s:h("SpecialChar", s:fg, "", "")
 call s:h("Tag", s:fg, "", "")
 call s:h("Delimiter", s:fg, "", "")
 call s:h("SpecialComment", s:fg, "", "")
+call s:h("Debug", s:fg, "", "")
+call s:h("Underlined", s:fg, "", "")
+call s:h("Ignore", s:fg, "", "")
+call s:h("Error", s:red, s:gutter_bg, "")
+call s:h("Todo", s:purple, "", "")
+" }
+
+
+" Plugins {
+" GitGutter
+call s:h("GitGutterAdd", s:green, s:gutter_bg, "")
+call s:h("GitGutterDelete", s:red, s:gutter_bg, "")
+call s:h("GitGutterChange", s:yellow, s:gutter_bg, "")
+call s:h("GitGutterChangeDelete", s:red, s:gutter_bg, "")
+" Fugitive
+call s:h("diffAdded", s:green, "", "")
+call s:h("diffRemoved", s:red, "", "")
+" }
+
+
+" Git {
+call s:h("gitcommitComment", s:comment_fg, "", "")
+call s:h("gitcommitUnmerged", s:red, "", "")
+call s:h("gitcommitOnBranch", s:fg, "", "")
+call s:h("gitcommitBranch", s:purple, "", "")
+call s:h("gitcommitDiscardedType", s:red, "", "")
+call s:h("gitcommitSelectedType", s:green, "", "")
+call s:h("gitcommitHeader", s:fg, "", "")
+call s:h("gitcommitUntrackedFile", s:cyan, "", "")
+call s:h("gitcommitDiscardedFile", s:red, "", "")
+call s:h("gitcommitSelectedFile", s:green, "", "")
+call s:h("gitcommitUnmergedFile", s:yellow, "", "")
+call s:h("gitcommitFile", s:fg, "", "")
+hi link gitcommitNoBranch gitcommitBranch
+hi link gitcommitUntracked gitcommitComment
+hi link gitcommitDiscarded gitcommitComment
+hi link gitcommitSelected gitcommitComment
+hi link gitcommitDiscardedArrow gitcommitDiscardedFile
+hi link gitcommitSelectedArrow gitcommitSelectedFile
+hi link gitcommitUnmergedArrow gitcommitUnmergedFile
+" }
+
