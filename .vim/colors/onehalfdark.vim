@@ -48,7 +48,7 @@ function! s:h(group, fg, bg, attr)
     exec "hi " . a:group . " guifg=NONE cterm=NONE"
   endif
   if type(a:bg) == type({})
-    exec "hi " . a:group . " guibg=" . a:bg.gui . " ctermbg=" . a:bg.cterm
+    exec "hi " . a:group .  " guibg=NONE ctermbg=NONE"
   else
     exec "hi " . a:group . " guibg=NONE ctermbg=NONE"
   endif
